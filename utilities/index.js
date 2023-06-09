@@ -1,3 +1,3 @@
 const HttpError = require("./HttpError");
-
-module.exports = { HttpError };
+const { addSchema, editSchema } = require("./validationSchema");
+module.exports = { HttpError, addSchema, editSchema };
