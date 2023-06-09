@@ -8,13 +8,4 @@ const addSchema = Joi.object({
   phone: Joi.string().min(7).max(15).required(),
 });
 
-const editSchema = Joi.object({
-  name: Joi.string().min(2).max(12),
-  email: Joi.string().email({
-    minDomainSegments: 2,
-    tlds: { allow: ["com", "net"] },
-  }),
-  phone: Joi.string().min(7).max(15),
-}).xor("name", "email", "phone");
-
-module.exports = { addSchema, editSchema };
+module.exports = { addSchema };

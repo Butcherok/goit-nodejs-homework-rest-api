@@ -1,5 +1,5 @@
 const express = require("express");
-const {addSchema, editSchema} = require('../../utilities/')
+const {addSchema} = require('../../utilities/')
 
 const {
   listContacts,
@@ -62,12 +62,12 @@ router.delete("/:contactId", async (req, res, next) => {
 
 router.put("/:contactId", async (req, res, next) => {
   try {
-    const { error } = editSchema.validate(req.body);
+    const { error } = addSchema.validate(req.body);
     if (error) {
       throw HttpError(400, error.message);
     }
-    const { contactId } = req.params;
-    const result = await updateContact(contactId, req.body);
+    const { id } = req.params;
+    const result = await updateContact(id, req.body);
     if (!result) {
       throw HttpError(404, "Not found");
     }
