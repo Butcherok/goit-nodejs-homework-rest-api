@@ -1,6 +1,6 @@
-const { User } = require("../models/user");
+const { User } = require("../../models/user");
 
-const { HttpError, ctrlWrapper } = require("../utilities");
+const { HttpError, ctrlWrapper } = require("../../utilities");
 
 const register = async (req, res) => {
   const { email } = req.body;
