@@ -4,7 +4,7 @@ const {
   getCurrent,
   logout,
   subscriptionUpdate,
-} = require("./auth/auth");
+} = require("./users/users");
 
 const {
   getAll,

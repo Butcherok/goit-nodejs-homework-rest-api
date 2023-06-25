@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
-const { handleMongooseError } = require("../utilities");
-const { emailRegexp } = require("../constants");
+const { handleMongooseError } = require("../../utilities");
+const { emailRegexp } = require("../../constants");
 
 const userSchema = new Schema(
   {
@@ -44,9 +44,9 @@ const loginSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
-const schemas = {
+const userSchemas = {
   registerSchema,
   loginSchema,
 };
 
-module.exports = { User, schemas };
+module.exports = { User, userSchemas };

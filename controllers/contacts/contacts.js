@@ -1,12 +1,12 @@
 const { HttpError, ctrlWrapper } = require("../../utilities");
 
-const { Contact } = require("../../models/contact");
+const { Contact } = require("../../models/contacts/contact");
 
 const getAll = async (req, res) => {
   const { id: owner } = req.user;
   const { page = 1, limit = 10, favorite, search } = req.query;
   const skip = (page - 1) * limit;
-  const response = await Contact.find({ owner }, "-createAt -updatedAt", {
+  const response = await Contact.find({ owner }, "-createdAt -updatedAt", {
     skip,
     limit,
     favorite,
