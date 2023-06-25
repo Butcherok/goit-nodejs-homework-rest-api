@@ -1,4 +1,4 @@
-const { register, login } = require("./auth/auth");
+const { register, login, getCurrent, logout } = require("./auth/auth");
 
 const {
   getAll,
@@ -12,6 +12,8 @@ const {
 module.exports = {
   register,
   login,
+  getCurrent,
+  logout,
   add,
   getAll,
   getById,
