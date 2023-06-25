@@ -1,8 +1,7 @@
-const { ctrlWrapper } = require("../utilities");
+const { HttpError, ctrlWrapper } = require("../utilities");
 
 const { Contact } = require("../models/contact");
 
-const { HttpError } = require("../utilities");
 
 const getAll = async (_, res) => {
   const response = await Contact.find();
