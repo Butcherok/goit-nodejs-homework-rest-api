@@ -19,14 +19,14 @@ router.post(
   ctrl.add
 );
 
-router.delete("/:contactId", authenticate, isValidId, ctrl.delBiId);
+router.delete("/:contactId", authenticate, isValidId, ctrl.delById);
 
 router.put(
   "/:contactId",
   authenticate,
   isValidId,
   validateBody(contactSchemas.addSchema, "Missing fields"),
-  ctrl.updateBiId
+  ctrl.updateById
 );
 
 router.patch(

@@ -4,16 +4,16 @@ const {
   getCurrent,
   logout,
   subscriptionUpdate,
-} = require("./users/users");
+} = require("./users");
 
 const {
   getAll,
   getById,
   add,
-  delBiId,
-  updateBiId,
+  delById,
+  updateById,
   updateStatus,
-} = require("./contacts/contacts");
+} = require("./contacts");
 
 module.exports = {
   register,
@@ -24,7 +24,7 @@ module.exports = {
   add,
   getAll,
   getById,
-  delBiId,
-  updateBiId,
+  delById,
+  updateById,
   updateStatus,
 };
