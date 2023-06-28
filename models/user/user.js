@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 const { handleMongooseError } = require("../../utilities");
-const { emailRegexp } = require("../../constants");
+const {emailRegexp } = require("../../constants");
 
 const userSchema = new Schema(
   {
