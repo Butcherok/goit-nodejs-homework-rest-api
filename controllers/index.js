@@ -5,7 +5,9 @@ const {
   logout,
   subscriptionUpdate,
   updateAvatar,
-} = require("./users");
+  verifyEmail,
+  resendVerifyEmail,
+} = require('./users');
 
 const {
   getAll,
@@ -14,7 +16,7 @@ const {
   delById,
   updateById,
   updateStatus,
-} = require("./contacts");
+} = require('./contacts');
 
 module.exports = {
   register,
@@ -23,6 +25,8 @@ module.exports = {
   logout,
   subscriptionUpdate,
   updateAvatar,
+  verifyEmail,
+  resendVerifyEmail,
   add,
   getAll,
   getById,
